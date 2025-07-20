@@ -1,0 +1,20 @@
+{
+  "name": "rest-express",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "NODE_ENV=development tsx server/index.ts",
+    "build": "vite build && esbuild server/index.ts --platform=node --packages=external --bundle --format=esm --outdir=dist",
+    "start": "NODE_ENV=production node dist/index.js",
+    "db:push": "drizzle-kit push"
+  },
+  "dependencies": {
+    // Key dependencies for KrishiAI
+    "node-telegram-bot-api": "^0.66.0",
+    "@tensorflow/tfjs": "^4.22.0",
+    "ethers": "^6.15.0",
+    "drizzle-orm": "^0.39.1",
+    "@neondatabase/serverless": "^0.10.4",
+    // ... (all other dependencies as shown above)
+  }
+}
